@@ -1,251 +1,290 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
 * {
-    margin: 0;
-    padding: 0;
-    font-family: "Poppins", sans-serif;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  box-sizing: border-box;
 }
-
-
 
 /* shared section style here */
 .btn-primary {
-    background-color: rgb(221, 0, 0);
-    border: none;
-    border-radius: 5px;
-    padding: 12px 25px;
-    color: white;
-    font-size: 1.25rem;
-    font-weight: 400;
-    cursor: pointer;
+  background-color: rgb(221, 0, 0);
+  border: none;
+  border-radius: 5px;
+  padding: 12px 25px;
+  color: white;
+  font-size: 1.25rem;
+  font-weight: 400;
+  cursor: pointer;
 }
 
 .btn-primary:hover {
-    background-color: orange;
+  background-color: orange;
 }
-
-
-
 
 .header,
 main {
-    max-width: 1320px;
-    margin: 0 auto;
+  max-width: 1320px;
+  margin: 0 auto;
 }
 
 /* banner section style here */
 .banner-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: rgb(22, 22, 22);
-    border: none;
-    border-radius: 30px;
-    color: rgb(255, 255, 255);
-    margin: 50px auto 130px auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgb(22, 22, 22);
+  border: none;
+  border-radius: 30px;
+  color: rgb(255, 255, 255);
+  margin: 50px auto 130px auto;
+  animation: banner-animation 0.7s ease-out forwards;
+}
+
+/* Banner Animation section here */
+@keyframes banner-animation {
+  0% {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  50% {
+    opacity: 0.5;
+    transform: translateX(-10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0px);
+  }
 }
 
 .banner-content {
-    max-width: 580px;
-    padding-left: 106px;
+  max-width: 580px;
+  padding-left: 106px;
 }
 
 .banner-title {
-    font-size: 4.37rem;
-    font-weight: 700;
-    line-height: 4.37rem;
-    margin-bottom: 18px;
+  font-size: 4.37rem;
+  font-weight: 700;
+  line-height: 4.37rem;
+  margin-bottom: 18px;
 }
 
 .banner-description {
-    font-weight: 400;
-    margin-bottom: 30px;
+  font-weight: 400;
+  margin-bottom: 30px;
 }
 
 .banner-image {
-    max-width: 581px;
-    padding-top: 33px;
-    padding-right: 38px;
+  max-width: 581px;
+  padding-top: 33px;
+  padding-right: 38px;
 }
 
 .banner-image img {
-    width: 100%;
-    display: block;
+  width: 100%;
+  display: block;
+  animation: banner-player-animation 1s ease-out backwards;
+}
+
+/* banner player animation here */
+@keyframes banner-player-animation {
+  0% {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  50% {
+    opacity: 0.7;
+    transform: translateX(-10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0px);
+  }
 }
 
 /* match date secion style here */
 .sidebar {
-    background-color: black;
-    padding: 30px;
-    max-width: 315px;
-    max-height: 315px;
-    border: none;
-    border-radius: 10px;
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
-    margin-bottom: 150px;
+  background-color: black;
+  padding: 30px;
+  max-width: 315px;
+  max-height: 315px;
+  border: none;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  margin-bottom: 150px;
 }
 
 .sidebar button {
-    max-width: 250px;
+  max-width: 250px;
 }
 
 .sidebar button:nth-child(2),
 .sidebar button:nth-child(3) {
-    background-color: white;
-    color: black;
+  background-color: white;
+  color: black;
 }
 
 .sidebar button:nth-child(2):hover,
-.sidebar button:nth-child(3):hover{
-    background-color: orange;
+.sidebar button:nth-child(3):hover {
+  background-color: orange;
 }
-
 
 /* match container section style here */
 .match-date {
-    display: grid;
-    gap: 24px;
-    grid-template-columns: 315px calc(100% - 315px - 24px);
-    margin-bottom: 130px;
+  display: grid;
+  gap: 24px;
+  grid-template-columns: 315px calc(100% - 315px - 24px);
+  margin-bottom: 130px;
+  animation: match-date-animation 0.7s ease-in forwards;
+}
+
+/* match date animation here */
+@keyframes match-date-animation {
+  0% {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+  50% {
+    opacity: 0.7;
+    transform: translateX(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0px);
+  }
 }
 
 .match-container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 24px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
 }
 
 .match-card {
-    max-height: 245px;
-    border: 1px solid rgb(232, 232, 232);
-    border-radius: 10px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
+  max-height: 245px;
+  border: 1px solid rgb(232, 232, 232);
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
 
 .match-card .contributors {
-    max-width: 252px;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    align-items: center;
+  max-width: 252px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: center;
 }
 
 .contributors img {
-    width: 100%;
+  width: 100%;
 }
 
 .countries-match {
-    font-size: 1.25rem;
-    font-weight: 600;
-    margin-top: 20px;
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-top: 20px;
 }
 
 .match-time {
-    font-weight: 400;
-    color: rgb(77, 77, 77);
-    margin-top: 10px;
+  font-weight: 400;
+  color: rgb(77, 77, 77);
+  margin-top: 10px;
 }
 
 /* footer section style here */
 footer {
-    max-width: 1600px;
-    height: 600px;
-    background-color: black;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    margin: 0 auto;
+  max-width: 1600px;
+  height: 600px;
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: 0 auto;
 }
 
 footer .logo {
-    color: white;
-    font-size: 2.5rem;
-    font-weight: 600;
-    margin-bottom: 80px;
+  color: white;
+  font-size: 2.5rem;
+  font-weight: 600;
+  margin-bottom: 80px;
 }
 
 footer ul {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 }
 
 footer ul li {
-    list-style: none;
-    margin-left: 40px;
+  list-style: none;
+  margin-left: 40px;
 }
 
 footer ul li a {
-    text-decoration: none;
-    color: #B9B9B9;
-    font-weight: 500;
+  text-decoration: none;
+  color: #b9b9b9;
+  font-weight: 500;
 }
 
 /* responsive media query for small device  */
 @media screen and (max-width: 576px) {
+  .header,
+  main {
+    max-width: 95%;
+  }
 
-    .header,
-    main {
-        margin-left: 10px;
-        margin-right: 10px;
-    }
+  .banner-container {
+    flex-direction: column;
+    margin-top: 13px;
+    margin-bottom: 50px;
+  }
 
-    .banner-container {
-        flex-direction: column;
-    }
+  .banner-content {
+    padding: 20px;
+    text-align: center;
+  }
 
-    .banner-container {
-        margin-top: 24px;
-        margin-bottom: 50px;
-    }
+  .banner-title {
+    font-size: 3rem;
+  }
 
-    .banner-content {
-        padding: 20px;
-        text-align: center;
-    }
+  .match-update {
+    grid-template-columns: 1fr;
+  }
 
-    .banner-title {
-        font-size: 3rem;
-    }
+  .match-date {
+    grid-template-columns: 1fr;
+  }
 
-    .match-update {
-        grid-template-columns: 1fr;
-    }
+  .sidebar {
+    width: 315px;
+    margin: 0 auto;
+    margin-bottom: 25px;
+  }
 
-    .match-date {
-        grid-template-columns: 1fr;
-    }
+  .match-container {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    justify-items: center;
+  }
 
-    .sidebar {
-        width: 315px;
-        margin: 0 auto;
-        margin-bottom: 25px;
-    }
+  .match-card {
+    width: 315px;
+    height: 200px;
+  }
 
-    .match-container {
-        grid-template-columns: 1fr;
-        gap: 40px;
-        justify-items: center;
-    }
+  footer ul {
+    flex-direction: column;
+    gap: 24px;
+  }
 
-    .match-card {
-        width: 315px;
-        height: 200px;
-    }
-
-    footer ul {
-        flex-direction: column;
-        gap: 24px;
-    }
-
-    footer ul li {
-        margin: 0;
-    }
-
+  footer ul li {
+    margin: 0;
+  }
 }
